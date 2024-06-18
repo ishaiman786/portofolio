@@ -32,6 +32,9 @@ section{
     z-index: 100 ;
     /* border: 0 0 2px solid black; */
 }
+.header.sticky{
+    border-bottom: .1rem solid black;
+}
 .logo{
     font-size: 2.5rem;
     color: black;
@@ -51,7 +54,7 @@ section{
 }
 #menu-icon{
     font-size: 3.6rem;
-    color: white;
+    color: black;
     display: none;
 }
 .home{
@@ -319,4 +322,111 @@ padding: 20%;
 .footer-iconTop a i{
     font-size: 2.4rem;
     color: black;
+}
+@media(max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width: 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem ;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .portfolio{
+        padding-bottom: 7rem;
+    }
+    .contact{
+        min-height: auto;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media(max-width:768px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: whitesmoke;
+        border-top:.1rem solid rbga(0, 0, 0, .2) ;
+        box-shadow: 0 .5rem 1rem black;
+        display: none;
+    }
+    .navbar .active{
+        display: block; 
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin:1rem 0;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home-content h3{
+        font-size: 
+        2.6rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home.img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .portfolio h2{
+        margin-bottom: 3rem;
+    }
+    .portfolio-container{
+        grid-template-columns: repeat(2 ,1fr);
+    }
+}
+@media(max-width:617px){
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width:450px){
+    html{font-size: 50px;
+    }
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
+@media(max-width:365px){
+    .home-img img{
+        width: 90vw;
+    }
+    .about-img img{
+        width: 90vw;
+    }
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
 }
