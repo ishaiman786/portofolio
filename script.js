@@ -1,13 +1,13 @@
-let menuIcon= document.querySelector('#menu-icon');
-let navbar=document.querySelector('.navbar');
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('fa-solid fa-x');
-    navbar.classList.toggle('active')
+    navbar.classList.toggle('active');
 };
 
 
 let sections=document.querySelectorAll("section");
-let navlinks=document.querySelectorAll("header nav a");
+let navlinks=document.querySelectorAll("header navbar a b");
 window.onscroll = () => {
     sections.forEach(sec =>{
         let top =window.scrollY;
@@ -18,7 +18,7 @@ window.onscroll = () => {
         if(top >= offset && top < offset + height ){
             navlinks.forEach(links =>{
                 links.classList.remove("active");
-                document.querySelector("header nav a[href*="+ id +"]").classList.add("active")
+                document.querySelector("header navbar a b[href*="+ id +"]").classList.add("active");
             });
         };
     });

@@ -48,6 +48,11 @@ section{
      margin-left: 4rem;
      transition: .3s;
 }
+/* .navbar a{
+    display: block;
+    font-size: 2rem;
+    margin:1rem 0;
+} */
 .navbar a:hover,
 .navbar a.active{
     color: aqua;
@@ -371,6 +376,7 @@ padding: 20%;
         display: block;
         font-size: 2rem;
         margin:1rem 0;
+      
     }
     .home{
         flex-direction: column;
@@ -409,10 +415,11 @@ padding: 20%;
     }
 }
 @media(max-width:450px){
-    html{font-size: 50px;
+    html{
+        font-size: 50px;
     }
     .contact form .input-box input{
-        width: 100%;
+        width: 100%;;
     }
 }
 @media(max-width:365px){
