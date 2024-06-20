@@ -347,7 +347,8 @@ padding: 20%;
         padding-bottom: 7rem;
     }
     .contact{
-        min-height: auto;
+        /* min-height: auto; */
+        padding-bottom: 7rem;
     }
     .footer{
         padding: 2rem 3%;
@@ -357,27 +358,39 @@ padding: 20%;
     #menu-icon{
         display: block;
     }
-    .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 1rem 3%;
-        background: whitesmoke;
-        border-top:.1rem solid rbga(0, 0, 0, .2) ;
-        box-shadow: 0 .5rem 1rem black;
-        display: none;
-    }
-    .navbar .active{
-        display: block; 
-    }
 
-    .navbar a{
-        display: block;
-        font-size: 2rem;
-        margin:1rem 0;
-      
-    }
+.navbar {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    z-index: 1000; 
+}
+
+.navbar.active {
+    display: block;
+}
+
+.navbar a {
+    display: block;
+    padding: 1rem 0;
+    color:  black;
+    text-decoration: none;
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+.navbar a:hover {
+    background-color: white;
+}
+
+.fa-bars,
+.fa-x {
+    cursor: pointer;
+}
     .home{
         flex-direction: column;
     }
@@ -407,6 +420,19 @@ padding: 20%;
     }
     .portfolio-container{
         grid-template-columns: repeat(2 ,1fr);
+    }
+    .contact form {
+        max-width: 100%; 
+        padding: 0 2rem; 
+    }
+    .contact form .input-box {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .contact form .input-box input,
+    .contact form textarea {
+        width: 100%;
     }
 }
 @media(max-width:617px){

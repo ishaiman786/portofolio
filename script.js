@@ -1,31 +1,26 @@
+
+
 let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+let navbar = document.querySelector('#navbar');
+
+
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle('fa-solid fa-x');
-    navbar.classList.toggle('active');
+    navbar.classList.toggle('active'); 
+
+    if (menuIcon.classList.contains('fa-bars')) {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-x');
+    } else {
+        menuIcon.classList.remove('fa-x');
+        menuIcon.classList.add('fa-bars');
+    }
 };
 
+document.addEventListener('click', function(e) {
+    if (!navbar.contains(e.target) && e.target !== menuIcon) {
+        navbar.classList.remove('active');
+        menuIcon.classList.remove('fa-x');
+        menuIcon.classList.add('fa-bars');
+    }
+});
 
-let sections=document.querySelectorAll("section");
-let navlinks=document.querySelectorAll("header navbar a b");
-window.onscroll = () => {
-    sections.forEach(sec =>{
-        let top =window.scrollY;
-        let offset = sec.offsetTop -150;
-        let height =sec.offsetHeight;
-        let id =sec.getAttribute("id");
-
-        if(top >= offset && top < offset + height ){
-            navlinks.forEach(links =>{
-                links.classList.remove("active");
-                document.querySelector("header navbar a b[href*="+ id +"]").classList.add("active");
-            });
-        };
-    });
-    let header= document.querySelector("header");
-    header.classList.toggle("sticky",window.scrollY > 100);
-   
-    menuIcon.classList.remove("fa-solid fa-x");
-    navbar.classList.remove("active");
-
-};
