@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:sans-serif;
+    font-family:big john;
     text-decoration: none;
     border: none;
     outline: none;
@@ -66,12 +66,27 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    animation: fadeIn 1s ease-out;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1s;
+        transform: translateY(0);
+    }
 }
 span{
     color: aqua;
 }
+
 .home-img img{
     width:500px;
+    clip-path: polygon(23% 1%, 78% 1%, 100% 23%, 100% 78%, 78% 100%, 23% 100%, 2% 78%, 2% 23%);
+    
 }
 .home-content h3{
     font-size:3.2rem ;
@@ -110,7 +125,7 @@ box-shadow:  0 0 1rem black;
 }
 .btn{
     display: inline-block;
-    padding: 1rem 2.8rem;
+    padding: 1rem 1.8rem;
     background: aqua;
     border-radius: 4rem;
     box-shadow: 0 0 1rem black;
@@ -119,6 +134,7 @@ box-shadow:  0 0 1rem black;
     font-weight: 600;
     transition: .5s ease;
     border-color: black;
+    font-size:12px ;
 }
 .btn:hover{
     box-shadow: none;
@@ -130,11 +146,26 @@ box-shadow:  0 0 1rem black;
     align-items: end;
     gap: 4rem;
     background:white;
+    animation: slideInLeft 1s ease-out;
+}
+@keyframes slideInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 .about-img img{
     width:36vw;
     margin-bottom: 90px;
+    clip-path: polygon(23% 2%, 78% 2%, 100% 23%, 100% 78%, 78% 100%, 23% 100%, 2% 78%, 2% 23%); 
+   
 }
+
+
 .heading{
     text-align: center;
     font-size: 4.5rem;
@@ -160,14 +191,32 @@ box-shadow:  0 0 1rem black;
     margin-bottom: 140px;
 }
 .services{
+    
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    animation: slideInRight 1s ease-out;
     margin-bottom: 3rem;
 }
+@keyframes slideInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .services-container{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+
 }
 .services-container .services-box{
     flex: 1 1 30rem;
@@ -199,7 +248,23 @@ box-shadow:  0 0 1rem black;
 }
 .portfolio{
     background: white;
+    align-items: center;
+    gap: 2.5rem;
+    background: white;
+    animation: zoomIn 1s ease-out;
 }
+
+@keyframes zoomIn{
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .portfolio h2{
     margin-bottom: 4rem;
 }
@@ -265,6 +330,7 @@ box-shadow:  0 0 1rem black;
     font-size: 2rem;
     color: black;
 }
+
 .contact h2{
     margin-bottom: 3rem;
 }
@@ -273,6 +339,19 @@ box-shadow:  0 0 1rem black;
     margin: 1rem auto;
     text-align: center;
     margin-bottom: 3rem;
+}
+.contact{
+    animation: fadeInUp 1s ease-out;
+}
+@keyframes fadeInUp{
+     0%{
+        opacity: 0;
+        transform: translateY(50px);
+     }
+     100%{
+        opacity: 1;
+        transform: translateY(0);
+     }
 }
 .contact form .input-box{
     display: flex;
